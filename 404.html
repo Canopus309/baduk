@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Table Top으로 옮겼습니다</title>
+<meta http-equiv="refresh" content="0; url=https://canopus309.github.io/tabletop/go/">
+<link rel="canonical" href="https://canopus309.github.io/tabletop/go/">
+<style>body{font-family:-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:#f4f1ea;color:#1d1f23;display:grid;place-items:center;min-height:100vh;margin:0;text-align:center;padding:16px}a{color:#2f6f5e;font-weight:700}@media(prefers-color-scheme:dark){body{background:#16171a;color:#eceae6}a{color:#4fa58c}}</style>
+</head>
+<body>
+<div><h1 style="font-size:22px">바둑 AI가 Table Top이 되었습니다</h1>
+<p>새 주소로 이동합니다: <a href="https://canopus309.github.io/tabletop/go/">canopus309.github.io/tabletop</a></p>
+<p style="font-size:13px;opacity:.7">홈 화면에 추가해 두셨다면 새 주소에서 다시 추가해 주세요. 대국 기록은 그대로 이어집니다.</p></div>
+<script>
+// 예전 서비스 워커와 캐시를 정리하고 새 주소로
+if('serviceWorker' in navigator)navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>{if(r.scope.endsWith('/baduk/'))r.unregister();})).catch(()=>{});
+if(window.caches)caches.keys().then(ks=>ks.forEach(k=>{if(k.startsWith('baduk-ai'))caches.delete(k);})).catch(()=>{});
+location.replace('https://canopus309.github.io/tabletop/go/'+location.hash);
+</script>
+</body>
+</html>
